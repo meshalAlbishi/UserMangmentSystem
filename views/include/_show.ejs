@@ -1,0 +1,43 @@
+<% let i=1; %>
+
+    <% users.forEach(user=> { %>
+
+        <tr>
+            <td>
+                <%= i++ %>
+            </td>
+
+            <td>
+                <%= user.name %>
+            </td>
+
+            <td>
+                <%= user.email %>
+            </td>
+
+            <td>
+                <%= user.gender %>
+            </td>
+
+            <td>
+                <%= user.status %>
+            </td>
+
+            <td>
+
+                <!-- update icon -->
+                <a href="/update-user?id=<%= user._id %>" class="btn border-shadow update">
+                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                </a>
+
+                <!-- delete icon -->
+                <a data-id="<%= user._id %>" class="btn border-shadow delete">
+                    <span class="text-gradient"><i class="fas fa-times"></i></span>
+                </a>
+
+            </td>
+        </tr>
+
+
+        <% }) %>
+            <!-- end of forEach -->
