@@ -47,9 +47,40 @@ The server will run on ``` http://localhost:5000/ ```
         "__v": 0
     }]
     ```
+ 
+ <hr>
+ 
+#### POST ```localhost:5000/api/users/```
+- Return: return the new created user.
+
+- Sample Request: ```curl 
+                         -d '{
+                                "name": "mohammed",
+                                "email": "mohammed@gmail.com",
+                                "gender": "Male",
+                                "status": "Inactive"
+                              }'
+                         -H "Content-Type: application/json"  
+                         -X "POST" http://localhost:5000/api/users/```
+
+- Arguments: 
+    - None
+
+- Sample Response:
+    ```
+   {
+        "_id": "60ff4806624ad24d582701fc",
+        "name": "meshal mohammed",
+        "email": "meshal@email.com",
+        "gender": "Male",
+        "status": "Active",
+        "__v": 0
+    }
+    ```
     
-    
- #### GET ```localhost:5000/api/users?id=60ff4806624ad24d582701fc```
+ <hr>
+
+#### GET ```localhost:5000/api/users?id=60ff4806624ad24d582701fc```
 - Return: return a specific user by id.
 
 - Sample Request: ```curl http://localhost:5000/api/users?id=60ff4806624ad24d582701fc```
@@ -68,15 +99,16 @@ The server will run on ``` http://localhost:5000/ ```
         "__v": 0
     }
     ```
-    
-    
- #### PUT ```localhost:5000/api/users/:id```
+
+<hr>
+        
+#### PUT ```localhost:5000/api/users/:id```
 - Return: return a specific user by id after update it.
 
 - Sample Request: ```curl -d '{"name": "meshal mohammed"}' -H "Content-Type: application/json"  -X "PATCH" http://localhost:5000/api/users/60ff4806624ad24d582701fc```
 
 - Arguments: 
-    - it take the id of the user in the URL after the ```users/``` as a query arguments.
+    - it take the id of the user in the URL after the ```users/```.
 
 - Sample Response:
     ```
@@ -89,3 +121,23 @@ The server will run on ``` http://localhost:5000/ ```
         "__v": 0
     }
     ```
+
+<hr>
+
+#### DELETE ```localhost:5000/api/users/:id```
+- Return: return a message if the user deleted or not.
+
+- Sample Request: ```curl -X "DELETE" http://localhost:5000/api/users/60ff4806624ad24d582701fc```
+
+- Arguments: 
+    - it take the id of the user in the URL after the ```users/```.
+
+- Sample Response:
+    ```
+   {
+    "message": "User with ID 60ff4806624ad24d582701fc deleted"
+    }
+    ```
+
+    
+
