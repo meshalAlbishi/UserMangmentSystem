@@ -1,5 +1,5 @@
 # User Mangment System
-This project was developed to apply new knowledge that I learned node.js, express.js, MongoDB. In addition, I use the MVC Pattren.
+This project was developed to apply new knowledge that I learned node.js, express.js, MongoDB, EJS. In addition, I use the MVC Pattren.
 
 ## Getting Started
 
