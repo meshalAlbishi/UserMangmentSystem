@@ -3,7 +3,6 @@ $('#add_user').submit((event) => {
 });
 
 
-// try use form directly
 $('#update_user').submit((event) => {
     event.preventDefault();
 
